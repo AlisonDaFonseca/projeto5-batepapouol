@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    justify-content: center;
+    width: 375px;
+    margin: 0 auto;
+
+    
+    background-color: #F3F3F3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    position: relative;
+}
+*{
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+}
+
+.header{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    width: 375px;
+    height: 80px;
+
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+}
+
+.header img{
+    height: 53px;
+    width: 75px;
+}
+.header ion-icon{
+    font-size: 30px;
+}
+.corpo{
+    background-color: #F3F3F3;
+    margin-top: 120px;
+    width: 100%;
+}
+.corpo-mensagem{
+    width: 100%;
+    min-height: 40px;
+    background-color: #FFFFFF;
+
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.corpo-mensagem div{
+    margin-left: 10px;
+  
+}
+.identificacao{
+    line-height: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tempo{
+ color: #AAAAAA;
+}
+.nome{
+    font-weight: 700;
+}
+.mensagem{
+    font-weight: 400;
+}
+.rodape{
+    width: 375px;
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.rodape ion-icon{
+    font-size: 22px;
+}
+
+.rodape input{
+    border: none;
+}
+
+input::placeholder{
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+}
