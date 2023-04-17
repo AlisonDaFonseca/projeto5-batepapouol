@@ -5,6 +5,11 @@ let mensagens = [
     
 ];
 
+let requisicao = axios.post('https://mock-api.driven.com.br/api/vm/uol/participants', {
+    name: usuario
+  });
+
+requisicao.catch(pedirOutroNome);
 
 function pegarMensagensServidor(resposta){
     let promessa = axios.get('https://mock-api.driven.com.br/api/vm/uol/messages');
@@ -13,9 +18,6 @@ function pegarMensagensServidor(resposta){
 
 setInterval(pegarMensagensServidor, 3000);
 
-const requisicao = axios.post('https://mock-api.driven.com.br/api/vm/uol/participants', {
-    name: usuario
-  });
 
 function hospedarMensagensServidor(resposta){
     mensagens = resposta.data;
@@ -26,16 +28,12 @@ function hospedarMensagensServidor(resposta){
 function pedirOutroNome(erro){
     let erroNome = erro.response.status;
 
-        while(erroNome === 400){
-            usuario = prompt('Qual seu nome?')
-        }
-        requisicao = axios.post('https://mock-api.driven.com.br/api/vm/uol/participants', {
-            name: usuario
-          });
-        
+        if(erroNome === 400) {
+            window.location.reload();
+        }  
 } 
 
-requisicao.catch(pedirOutroNome);
+
 
 
 function verificaConexao(){
