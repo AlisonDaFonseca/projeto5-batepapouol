@@ -40,15 +40,23 @@ body{
 .header ion-icon{
     font-size: 30px;
 }
+
+.cinza{
+    background-color: #DCDCDC;
+}
+.branco{
+    background-color: #FFFFFF;
+}
 .corpo{
     background-color: #F3F3F3;
     margin-top: 120px;
+    margin-bottom: 86px;
     width: 100%;
 }
 .corpo-mensagem{
     width: 100%;
     min-height: 40px;
-    background-color: #FFFFFF;
+    height: auto;
 
     margin-top: 5px;
 
@@ -56,11 +64,14 @@ body{
     justify-content: flex-start;
     align-items: center;
 
+    flex-wrap: wrap;
+
 }
 .corpo-mensagem div{
     margin-left: 10px;
   
 }
+
 .identificacao{
     line-height: 20px;
     display: flex;
@@ -105,4 +116,9 @@ input::placeholder{
     font-weight: 400;
     font-size: 18px;
     font-style: italic;
+}
+
+button{
+  border: none; 
+  background-color: transparent;
 }
